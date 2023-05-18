@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+</body>
+</html>
+
+        <!DOCTYPE html>
+        <html lang="en">
+        
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+            <!-- Bootstrap -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        
+            <!-- Font Awesome -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+                integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+                crossorigin="anonymous" referrerpolicy="no-referrer" />
+                <link rel="stylesheet" href="style.css">
+
+            <title>PHP CRUD Application</title>
+            <style>
+                body {
+                    background-color: rgb(255, 255, 255);
+                    background-image: url("Sunset.png");
+                    background-size: cover;
+                }
+        
+                .title,
+                .form-label {
+                    color: white;
+                }
+        
+                .error {
+                    color: white;
+                    font-size: 10pt;
+                }
+        
+                .container {
+                    background-image: url("Sunset.png");
+                    background-size: cover;
+                    background-color: white;
+                    border-radius: 5px;
+                    max-width: 400px;
+                    height: 570px;
+                    padding: 10px;
+                    margin: auto;
+                    box-shadow:  1px 0px 11px rgba(205, 157, 139, 0.88);
+        
+                }
+            </style>
+        </head>
+        
+        <body>
+            <section class="navigation">
+                <div class="nav-container">
+                  <div class="brand">
+                    <img src="images/logo.png" alt="Logo">
+                  </div>
+                  <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                      <li>
+                        <a href="#!">Home</a>
+                      </li>
+                      <li>
+                        <a href="#!">About</a>
+                      </li>
+                      <li>
+                        <a href="#!">Services</a>
+                        <ul class="nav-dropdown">
+                          <li>
+                            <a href="#!">Stickers Design</a>
+                          </li>
+                          <li>
+                            <a href="#!">stickers ready</a>
+                          </li>
+                          <li>
+                            <a href="#!">Graphic Design</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="#!">Pricing</a>
+                      </li>
+                      <li>
+                        <a href="#!">shopping</a>
+                        <ul class="nav-dropdown">
+                          <li>
+                            <a href="#!">Web Design</a>
+                          </li>
+                          <li>
+                            <a href="#!">Web Development</a>
+                          </li>
+                          <li>
+                            <a href="#!">Graphic Design</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a href="contact.html">Contact</a>
+                      </li>
+                      <li>
+                        <a href="signup.html">sign Up</a>
+                      </li>
+                      <li>
+                      <!-- <li>myForm -->
+                      <button class="open-button" onclick="openForm()"> <a href="#myForm">sign in</a></button>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </section>
+            <nav class="navbar navbar-light justify-content-center fs-3 mb-5">
+                <span class="title"> Sign up</span>
+            </nav>
+        
+            <div class="container">
+        
+        
+                <div class="container d-flex justify-content-center">
+                    <!-- name -->
+                    <form action="" method="post" style="width:50vw; min-width:300px;" id="form_1"enctype="multipart/form-data"
+ >
+        
+                        <div class="row mb-3">
+                            <div class="col">
+                                <!-- <label class="form-label">Name:</label> -->
+                                <input type="text"   id="username" class="form-control " name="Name" placeholder="your name" value="">
+                                <span class="error">*
+                                </span>
+                                <div style="display: block;" id="name_error">  <small>eg:username </small> </div>
+                            </div>
+                            <!-- email -->
+                            <div class="col">
+                                <!-- <label class="form-label">Email:</label> -->
+                                <input type="text" id="email" class="form-control" name="Email" placeholder="name@example.com" value="">
+                                <span class="error">*
+                                </span>
+                                <div style="display: block;" id="email_error"></div>
+                            </div>
+                        </div>
+        
+                        <!--Phone_Number  -->
+                        <div class="mb-3">
+                            <!-- <label class="form-label">Phone_Number:</label> -->
+                            <input type="number" id="mobile" class="form-control" name="Phone_Number" placeholder="Phone_Number:" value="">
+        
+                            <span class="error">*
+                            </span>
+                            <div style="display: block;" id="mobile_error"></div>
+        
+                        </div>
+                        <!--dateofbirth -->
+                        <div class="mb-3">
+                            <!-- <label class="form-label">date_of_birth :</label> -->
+                            <input type="date" id="DOB" class="form-control" name="DOB" placeholder="date_of_birth" value="">
+        
+                            <span class="error">*
+                            </span>
+                            <div style="display: block;" id="DOB_error"></div>
+                        </div>
+                        <!--  password-->
+                        <div class="mb-3">
+                            <!-- <label class="form-label">Password:</label> -->
+                            <input type="password" id="password" class="form-control" name="Password" placeholder="password" value="">
+        
+                            <span class="error">*
+                            </span>
+                            <div style="display: block;" id="password_error"></div>
+                        </div>
+                        <!-- confirm  password-->
+                        <div class="mb-3">
+                            <!-- <label class="form-label">ConfirmPassword:</label> -->
+                            <input type="password" id="password_confirm" class="form-control" name="ConfirmPassword" placeholder="password" value="">
+        
+                            <span class="error">*
+                            </span>
+                            <div style="display: block;" id="password_confirm_error"></div>
+                        </div>
+                        <!-- select -->
+                        <div class="mb-3">
+                            <!-- <label class="form-label">Selectype:</label> -->
+                            <select name="SelectType" id="">
+                                <option>user</option>
+                                <option>admin</option>
+                            </select>
+        
+                        </div>
+                        <!-- image -->
+                        <div class="mb-3">
+                            <!-- <label class="form-label">image:</label> -->
+                            <input type="file" class="form-control" name="image" >
+        
+        
+                        </div>
+                        <div>
+                            <button type="submit" value="Submit" id="Sign_up" class="btn btn-success" name="submit">Save</button>
+                            <a href="index.html" class="btn btn-danger">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="top_header">
+                <section>
+                <span><i class="fa fa-map-marker"></i></span>
+                <span>Street, full address, state/province, country, pincode</span>
+                </section>
+                <section>
+                <span><i class="fa fa-phone"></i></span>
+                <span>(00) 0000 0000</span>
+                </section>
+                <section>
+                <span><i class="fa fa-envelope"></i></span>
+                <span>info@websitename.com</span>
+                </section>
+                </div>
+                <span class="border-shape"></span>
+                <div class="bottom_content">
+                <section>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-telegram"></i></a>
+                </section>
+                <section>
+                <a href="#">Home</a>
+                <a href="#">About us</a>
+                <a href="#">Order</a>
+                <a href="#">Retail</a>
+                <a href="#">Member</a>
+                <a href="#">Contact Us</a>
+                </section>
+                </div>
+                <div class="copyright">
+                Copyright © 2021 websitename - All rights reserved 
+                </div>
+                </footer>
+                <footer class="footer">
+                    <div class="top_header">
+                    <section>
+                    <span><i class="fa fa-map-marker"></i></span>
+                    <span>Street, full address, state/province, country, pincode</span>
+                    </section>
+                    <section>
+                    <span><i class="fa fa-phone"></i></span>
+                    <span>(00) 0000 0000</span>
+                    </section>
+                    <section>
+                    <span><i class="fa fa-envelope"></i></span>
+                    <span>info@websitename.com</span>
+                    </section>
+                    </div>
+                    <span class="border-shape"></span>
+                    <div class="bottom_content">
+                    <section>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="#"><i class="fa fa-telegram"></i></a>
+                    </section>
+                    <section>
+                    <a href="#">Home</a>
+                    <a href="#">About us</a>
+                    <a href="#">Order</a>
+                    <a href="#">Retail</a>
+                    <a href="#">Member</a>
+                    <a href="#">Contact Us</a>
+                    </section>
+                    </div>
+                    <div class="copyright">
+                    Copyright © 2021 websitename - All rights reserved 
+                    </div>
+                    </footer>
+            <!-- Bootstrap -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+                crossorigin="anonymous"></script>
+                <script src="signup.js"></script>
+              
+        </body>
+        
+        </html>
+
+
+
+
+?>
